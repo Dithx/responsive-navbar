@@ -111,29 +111,37 @@
     z-index: 3;
 }
 
-#menu.hidden{
-    display: block;
+#menu.showMenu{
+    display: flex;
+    flex-direction: column;
 }
 
-#mobile{
+#mobile-navbar{
     display: flex;
     height: 70vh;
     flex-direction: column;
     list-style: none;
     /* justify-content: center; */
-    align-items: flex-start;
-    gap: 2em 0;
+    align-items: center;
+    gap: 3em 0;
     padding: 6em 2em;
 }
 
-#mobile a{
+#mobile-navbar a{
     text-decoration: none;
     font-size: 1em;
     color: #240046;
 }
 
-#mobile a:hover{
+#mobile-navbar a:hover{
     color: #b5179e;
+}
+
+.signup a{
+    background-color: #7209b7;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 10px;
 }
 
 /* Header */
@@ -193,6 +201,7 @@ header h1{
 
 
 @media screen and (max-width: 450px) {
+
     .wrap-navbar{
         padding: 1em 30px;
     }
