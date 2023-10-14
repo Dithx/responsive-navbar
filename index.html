@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrap-menu">
+        <div id="menu">
+            <ul id="mobile">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#"">Project</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <nav>
+        <div class="wrap-navbar">
+            <div class="brand">
+                <a href="#" class="firstBrand">Dith</a>
+                <a href="#" class="secondBrand">Coding</a>
+            </div>
+            <ul id="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#"">Project</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="account">
+                <a href="#">Sign up</a>
+                <a href="#">Log in</a>
+            </div>
+
+            <div class="hamburger">
+                <span></span>
+                <span onclick="showMenu(this)"></span>
+                <span></span>
+            </div>
+
+            <!-- <div id="menuShow">
+                <h1></h1>
+            </div> -->
+        </div>
+    </nav>
+    
+    <script src="main.js"></script>
+</body>
+</html>
