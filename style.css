@@ -10,9 +10,9 @@
     position: relative;
     justify-content: space-between;
     align-items: center;
-    padding: 1em 300px;
+    padding: 1em 200px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f8f9fa;
+    background-color: #ffff;
 }
 
 #navbar{
@@ -24,6 +24,8 @@
 .brand{
     display: flex;
     font-size: 2em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    z-index: 4;
 }
 
 .brand .secondBrand{
@@ -32,7 +34,7 @@
 
 .wrap-navbar a{
     text-decoration: none;
-    color: #212529;
+    color: #240046;
 }
 
 #navbar a:hover, .account a:hover{
@@ -68,19 +70,49 @@
     height: 2px;
     background-color: #212529;
     margin: 2px 0;
-    z-index: 10;
+    z-index: 4;
+    transition: 0.1s ease-in-out;
+    border-radius: 5px;
 }
 
+#checkbox{
+    position: absolute;
+    z-index: 5;
+    width: 20px;
+    margin: 2px 0;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.hamburger input[type="checkbox"]:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg) translate(4px, 4.5px);
+    background-color: #240046;
+}
+
+.hamburger input[type="checkbox"]:checked ~ span:nth-of-type(2) {
+    opacity: 0;
+    transform: translateX(-2px);
+}
+
+.hamburger input[type="checkbox"]:checked ~ span:nth-of-type(3) {
+    transform: rotate(-45deg) translate(4px, -4.8px);
+    background-color: #240046;
+}
+
+
+
+
 #menu{
+    display: none;
     position: absolute;
     background-color: #f1faee;
     width: 100%;
     height: 100vh;
-    z-index: 4;
+    z-index: 3;
 }
 
 #menu.hidden{
-    display: none;
+    display: block;
 }
 
 #mobile{
@@ -88,30 +120,55 @@
     height: 70vh;
     flex-direction: column;
     list-style: none;
-    justify-content: center;
-    align-items: center;
-    gap: 5em 0;
+    /* justify-content: center; */
+    align-items: flex-start;
+    gap: 2em 0;
+    padding: 6em 2em;
 }
 
 #mobile a{
     text-decoration: none;
-    font-size: 1.2em;
-    color: #7209b7;
+    font-size: 1em;
+    color: #240046;
+}
+
+#mobile a:hover{
+    color: #b5179e;
+}
+
+/* Header */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #10002b;
+}
+
+header h1{
+    color: white;
+    font-size: 5em;
+    text-transform: uppercase;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 @media (max-width: 1280px){
     .wrap-navbar{
-        padding: 1em 200px;
+        padding: 1em 150px;
     }
 }
 
-@media (max-width: 1024px){
+@media (max-width: 1100px){
     .wrap-navbar{
         padding: 1em 100px;
     }
 }
 
-@media (max-width: 900px){
+@media (max-width: 950px){
+    .brand{
+        font-size: 1.7em;
+    }
+
     .hamburger{
         display: flex;
     }
@@ -121,7 +178,13 @@
         display: none;
         z-index: 5;
     }
+}
 
+@media screen and (max-width: 763px) {
+    .wrap-navbar{
+        padding: 1em 50px;
+    }
+    
 }
 
 
@@ -132,5 +195,9 @@
 
     .brand{
         font-size: 1.5em;
+    }
+
+    header h1{
+        font-size: 2em;
     }
 }

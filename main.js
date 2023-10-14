@@ -1,25 +1,27 @@
 const menu = document.getElementById('menu');
 const navbar = document.getElementById('navbar');
 const account = document.getElementsByClassName('account');
+const checkbox = document.getElementById('checkbox');
 
-let count = 1;
+let count = 0;
 
-const showMenu = function () {
+checkbox.addEventListener('change', function(){
     count += 1;
     show();
-}
+});
+
+// const showMenu = function () {
+// }
 
 function show() {
         if (count === 1) {
-            menu.classList.remove('hidden'); // Hapus kelas 'hidden' untuk menampilkan menu
+            menu.classList.add('hidden'); // Hapus kelas 'hidden' untuk menampilkan menu
             // navbar.style.display = "none";
             console.log(count);
         } else if (count === 2) {
-            menu.classList.add('hidden'); // Tambahkan kelas 'hidden' untuk menyembunyikan menu
+            menu.classList.remove('hidden'); // Tambahkan kelas 'hidden' untuk menyembunyikan menu
             // navbar.style.display = "block";
             console.log(count);
             count = 0; // Reset count
         }
     }
-// show()
-window.addEventListener('load', showMenu);
