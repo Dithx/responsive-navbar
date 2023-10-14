@@ -184,6 +184,10 @@ header h1{
     .wrap-navbar{
         padding: 1em 50px;
     }
+
+    header h1{
+        font-size: 3em;
+    }
     
 }
 

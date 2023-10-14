@@ -10,9 +10,6 @@ checkbox.addEventListener('change', function(){
     show();
 });
 
-// const showMenu = function () {
-// }
-
 function show() {
         if (count === 1) {
             menu.classList.add('hidden'); // Hapus kelas 'hidden' untuk menampilkan menu
